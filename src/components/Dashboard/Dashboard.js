@@ -56,8 +56,11 @@ const Dashboard = ({ user, userId }) => {
     }
   }, [user]);
 
-  if (error) return <p>Error loading data!</p>;
-  else if (!data) return <p>Loading...</p>;
+  if (error) {
+    console.log(error)
+    return <p>Error loading data!</p>;
+  }
+  else if (!data) return <p>Loading...</p>
   else {
     return (
       <div>
